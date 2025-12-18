@@ -44,7 +44,7 @@
       @apply text-2xl font-bold hover:text-violet-500;
     }
     button {
-      @apply border px-2 rounded-full text-violet-500 dark:bg-violet-400 dark:text-red-500;
+      @apply border px-2 rounded-full text-violet-500 dark:bg-violet-400 dark:text-white;
     }
   }
 }
