@@ -1,10 +1,6 @@
 @import "tailwindcss";
 @import "./likelion-theme.css" layer(theme);
-
-:root {
-  --color-euid: #ffc;
-}
-
+@import "./ui/apple/apple-utility-classes.css";
 @utility shape-circle {
   shape-outside: circle(50%);
 }
