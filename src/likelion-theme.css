@@ -9,7 +9,7 @@
   --breakpoint-xs: 30rem;
 
   /* 웹폰트 테마 */
-  --font-suit: "SUIT Variable", sans-serif;
+  --font-suit: 'SUIT Variable', sans-serif;
 
   /* 글자 크기 테마 */
   --text-lion: 2rem;

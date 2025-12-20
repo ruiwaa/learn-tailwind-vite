@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
-import path from "path";
-import fs from "fs";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from 'vite';
+import path from 'path';
+import fs from 'fs';
+import tailwindcss from '@tailwindcss/vite';
 
 // findAllHtmlFiles 함수 정의 추가
 function findAllHtmlFiles(directory) {
@@ -16,9 +16,9 @@ function findAllHtmlFiles(directory) {
 
       if (stat.isDirectory()) {
         scanDirectory(filePath);
-      } else if (file.endsWith(".html")) {
+      } else if (file.endsWith('.html')) {
         // 키 이름을 경로에서 추출 (확장자 제외)
-        const key = path.relative(__dirname, filePath).replace(".html", "");
+        const key = path.relative(__dirname, filePath).replace('.html', '');
         htmlFiles[key] = filePath;
       }
     }
@@ -33,11 +33,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        index: path.resolve(__dirname, "index.html"),
-        ...findAllHtmlFiles(path.resolve(__dirname, "src")),
+        index: path.resolve(__dirname, 'index.html'),
+        ...findAllHtmlFiles(path.resolve(__dirname, 'src')),
       },
     },
   },
-  appType: "mpa", // fallback 사용안함
+  appType: 'mpa', // fallback 사용안함
   server: {},
 });
